@@ -1,0 +1,9 @@
+{
+  "description": "Toggle Cloudflare WARP in quick settings.\nForked by unaibenidorm (original author: khaled-0, thank you!).\nThis extension depends on warp-cli parsing. To quickly get started, Read the Docs: https://github.com/unaibenidorm/WarpGnome#readme  \n\nThis extension is not affiliated, funded, or in any way associated with Cloudflare.\nTo Setup warp-cli, follow the official guide: https://developers.cloudflare.com/warp-client/get-started/linux/",
+  "name": "WarpGnome",
+  "shell-version": ["45", "46","47", "48", "49", "50"],
+  "settings-schema": "org.gnome.shell.extensions.cloudflare-warp-toggle.gschema",
+  "url": "https://github.com/unaibenidorm/WarpGnome",
+  "uuid": "warpgnome@unaibenidorm",
+  "version": 0
+}
