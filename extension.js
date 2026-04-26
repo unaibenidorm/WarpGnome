@@ -16,7 +16,7 @@ export default class WARPToggleExtension extends Extension {
       this._indicator.checkStatusAndUpdate();
     }
 
-    this._settings.connect("changed", (settings) => {
+    this._settingsChangedId = this._settings.connect("changed", (settings) => {
       if (settings.get_boolean("status-check")) {
         this.startStatusCheckLoop();
       } else {
@@ -33,6 +33,11 @@ export default class WARPToggleExtension extends Extension {
     if (this._interval) {
       clearInterval(this._interval);
       this._interval = null;
+    }
+
+    if (this._settingsChangedId) {
+      this._settings.disconnect(this._settingsChangedId);
+      this._settingsChangedId = null;
     }
 
     this._settings = null;

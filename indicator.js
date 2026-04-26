@@ -104,11 +104,19 @@ const WARPToggle = GObject.registerClass(
       addFamilies("Malware protection", "Malware protection", "warp-cli dns families malware");
       addFamilies("Malware and adult content", "Malware and adult content", "warp-cli dns families full");
 
-      this.menu.connect("open-state-changed", (menu, open) => {
+      this._openStateChangedId = this.menu.connect("open-state-changed", (menu, open) => {
         if (open) {
           this._updateSettings();
         }
       });
+    }
+
+    destroy() {
+      if (this._openStateChangedId) {
+        this.menu.disconnect(this._openStateChangedId);
+        this._openStateChangedId = null;
+      }
+      super.destroy();
     }
 
     async _updateSettings() {
