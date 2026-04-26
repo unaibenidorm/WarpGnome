@@ -17,7 +17,6 @@
 
 
 <img width="623" height="424" alt="image" src="https://github.com/user-attachments/assets/4dd48052-24f7-4d25-96da-c63c7718a04e" />
-<<<<<<< HEAD
 
 ***
 
@@ -160,4 +159,3 @@ This project is based on the original work by:
 
 This project is distributed under the same license as the original repository. See the `LICENSE` file for more details.
 
->>>>>>> c1b44bd (EGO code fix)
