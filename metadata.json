@@ -5,5 +5,5 @@
   "settings-schema": "org.gnome.shell.extensions.cloudflare-warp-toggle.gschema",
   "url": "https://github.com/unaibenidorm/WarpGnome",
   "uuid": "warpgnome@unaibenidorm",
-  "version": 0
+  "version": 1
 }
